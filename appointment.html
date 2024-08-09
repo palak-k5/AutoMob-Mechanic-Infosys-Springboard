@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+</head>
+<body>
+    <header>
+        <a href="home.html"><h1>AutoMob-Mechanic</h1></a>
+        <nav>
+            <a href="home.html">Home</a> |
+            <a href="services.html">Services</a> |
+            <a href="booking.html">Booking</a> |
+            <a href="mailto:contact@automob.co.in">contact@automob.co.in</a> |
+            <a href="tel:+999 999 9999">999 999 9999</a>
+
+        </nav>
+        <hr>
+    </header>
+    <section>
+        <h1>Schedule Your Appointment</h1>
+        <form method="post" action="booking-success.html" autocomplete="on">
+            <label for="appointment">Appointment Date: </label>
+            <input type="date" id="appointment" name="appointment" required>
+            <br><br>
+            <label for="address">Address:</label><br>
+            <textarea rows="10" cols="100"  required name="address" id="address"></textarea>
+            
+            <br><br>
+            <label for="city">City: </label>
+            <input type="text" id="text" name="text" required placeholder="Pune,Mumbai...">
+            <br><br>
+            <label for="state">State: </label>
+            <input list="statelist" id="state" name="state" required placeholder="Kerala,Maharashtra...">
+            <datalist name="statelist" id="statelist" required>
+                <option value="Assam">  </option>
+                <option value="Bihar"></option>
+                <option value="Gujarat"></option>
+                <option value="Goa"></option>
+                <option value="Madhya Pradesh"> </option>
+            </datalist>
+            <br><br>
+
+            <label for="noti">Send Notification:  </label>
+            <label for="Email">Email </label>
+            <input type="checkbox"  name="noti" id="Email" value="Email" required>
+
+            <label for="SMS">SMS </label>
+
+            <input type="checkbox"  name="noti" id="SMS" value="SMS" required>
+
+            <br><br>
+            
+            <button type="submit">Book</button>
+            <br>
+            <br><br><br>
+
+
+        </form>
+    </section>
+
+</body>
+</html>

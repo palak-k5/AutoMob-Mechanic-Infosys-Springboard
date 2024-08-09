@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+</head>
+<body>
+    <header>
+        <a href="home.html"><h1>AutoMob-Mechanic</h1></a>
+        <nav>
+            <a href="home.html">Home</a> |
+            <a href="services.html">Services</a> |
+            <a href="booking.html">Booking</a> |
+            <a href="mailto:contact@automob.co.in">contact@automob.co.in</a> |
+            <a href="tel:+999 999 9999">999 999 9999</a>
+
+        </nav>
+        <hr>
+        <h1>Book Your Service</h1>
+    </header>
+    <section>
+        <form method="post" action="appointment.html" autocomplete="on" >
+            <label for="name">Name:</label>
+            <input type="text" name="Name" pattern="^[A-Za-z]+ [A-Za-z]+$" title="Please enter a first and last name separated by a space" placeholder="John Doe" required>
+            
+            <br><br>
+            <label for="Email">Email Id:</label>
+            <input type="email" name ="Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+            " placeholder="John@yahoo.com">
+
+            <br><br>
+            <label for="phone">Phone number:</label>
+            <select>
+                <option value="code" selected disabled>code</option>
+                <option value=+213>+213</option>
+                <option value=+213>+91</option>
+                <option value=+213>+244</option>
+                <option value=+213>+61</option>
+
+            </select>
+            <input type="number" pattern="{1-9}[0-9]{9}" name ="phone" required placeholder="9823467856">
+            
+            <br><br>
+            <label for="service">Service:</label>
+            <select name="service" id="service" required>
+                <option value="bodyrepair">Body Repair Service</option>
+                <option value="carcare">Car Care Service</option>
+                <option value="preventivemaintenance" selected>Preventive-Maintenance</option>
+            </select>
+            <br><br>
+            <label for="carmake">Car Make</label>
+            <input list="carmakelist" id="carmake" name="carmake" placeholder="Suzuki,Toyota...">
+            <datalist name="carmakelist" id="carmakelist" required>
+                <option value="Honda">  </option>
+                <option value="Mahindra"></option>
+                <option value="Hyundai"></option>
+                <option value="Ford"></option>
+                <option value="Toyota"> </option>
+                <option value="Nissan"></option>
+            </datalist>
+            <br>
+            <br>
+            <label for="carmodel">Car Model: </label>
+            <input type="text " name="carmodel" id="carmodel" required placeholder="Alto,Innova...">
+            <br><br>
+            <label for="fuel">Fuel Type: </label>
+            <label for="petrol">Petrol </label>
+            <input type="radio" required name="fuel" id="petrol" value="Petrol">
+            <label for="diesel">Diesel </label>
+            <input type="radio" required name="fuel" id="diesel" value="diesel">
+            <label for="lpg">LPG </label>
+            <input type="radio" required name="fuel" id="lpg" value="lpg">
+            <label for="other">Other </label>
+            <input type="radio" required name="fuel" id="other" value="other">
+
+            <br><br>
+
+            <label for="km">Kilometer Ran: </label>
+            <input type="number" name="km" id="km" placeholder="...km">
+            <br>
+            <br>
+            <button type="submit">Schedule An Appointment</button>
+            <br>
+            <br><br><br>
+        </form>
+    </section>
+    <hr>
+    <footer>
+        Copyright &copy AutoMob-Mechanic.All Rights Reserved.
+    </footer>
+    
+</body>
+</html>
